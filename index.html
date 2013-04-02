@@ -36,6 +36,19 @@
 <p>Akbar is a bookmarklet that will simulate various types of user experiences.
 Currently only work in Chrome and Safari.</p>
 
+Drag this link to your bookmark bar -> <a href="javascript: (function () { 
+              if(document.getElementById('akbar')){
+                var element = document.getElementById('akbar');
+                element.parentNode.removeChild(element);
+                element = document.getElementById('akbar-filter');
+                element.parentNode.removeChild(element);
+              } else {
+                var jsCode = document.createElement('script'); 
+                var random = Math.round(Math.random()*3000);
+                jsCode.setAttribute('src', 'https://raw.github.com/howlowck/Akbar/master/akbar.js?'+random);            
+                  document.body.appendChild(jsCode); 
+              }
+             }());">Akbar</a>
 <h3>Authors and Contributors</h3>
 
 <p>This project was created by Hao Luo (<a href="https://github.com/howlowck" class="user-mention">@howlowck</a>) and contributed by Chris Walker (<a href="https://github.com/puntsok" class="user-mention">@puntsok</a>)</p>
