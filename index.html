@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>My Bookmarklets</head>
+<body>
+	<a href="javascript: (function () { 
+							if(document.getElementById('akbar')){
+								var element = document.getElementById('akbar');
+								element.parentNode.removeChild(element);
+								element = document.getElementById('akbar-filter');
+								element.parentNode.removeChild(element);
+							} else {
+								var jsCode = document.createElement('script'); 
+								var random = Math.round(Math.random()*3000);
+								jsCode.setAttribute('src', 'https://raw.github.com/howlowck/Akbar/master/akbar.js?'+random);      			
+							    document.body.appendChild(jsCode); 
+							}
+						 }());">Akbar</a>
+	<p>This is a test</p>
+	<p>This is a test</p>
+	<p>This is a test</p>
+	<p>This is a test</p>
+</body>
+</html>
