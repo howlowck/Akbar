@@ -18,25 +18,6 @@ function transform(text) {
     return output;
 }
 
-function dysify(node){
-	var iter = Math.round(node.innerText.length/5),
-		index = 0,
-		span = document.createElement("span");
-
-	span.style.cssText = "background-color:red";
-	while(index<=iter){
-		console.log(Math.round(Math.random()*iter));
-
-		node.innerText.substr(Math.round(Math.random()*iter),1).insertNode(span);
-		index++;
-	}
-	// console.log(node);
-	// re = new RegExp(/t/g);
-	// var string = node.innerText;
-	// node.innerText=string.replace(re,"<span>$1</span>");
-	// console.log("exe");
-}
-
 function lowvis() {
 	reset();
 	document.body.style.cssText += filter('blur(3px)');
@@ -53,18 +34,9 @@ function blind(){
 	document.querySelector("#akbar-filter").style.cssText = "left:0; top:0;position:fixed; width:100%; height:100%; z-index: 45000; background-color:black";
 }
 
-function dys(){
-	reset();
-	var nodeList = document.getElementsByTagName("div");
-	for (var i = 0; i < nodeList.length; ++i) {
-	    dysify(nodeList[i]);
-	    console.log("exed!");
-	}
-}
-
 function nomouse(){
 	reset();
-	document.querySelector("#akbar-filter").style.cssText= "left:0; top:0;position:fixed; width:100%; height:100%; z-index: 45000; "
+	document.querySelector("#akbar-filter").style.cssText= "left:0; top:0;position:fixed; width:100%; height:100%; z-index: 45000; ";
 }
 function reset(){
 	document.documentElement.style.cssText = "";
